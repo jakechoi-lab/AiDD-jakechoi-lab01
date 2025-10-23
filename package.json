@@ -4,9 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon -L src/index.js",
+    "docker:build": "docker build -t my-todo-app .",
+    "docker:run": "docker run -d -p 3000:3000 my-todo-app",
     "prettify": "prettier -l --write \"**/*.js\"",
-    "test": "jest",
-    "dev": "nodemon -L src/index.js"
+    "test": "jest"
   },
   "dependencies": {
     "express": "^4.18.2",
